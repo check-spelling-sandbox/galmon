@@ -92,8 +92,9 @@ jobs:
     steps:
       - name: check-spelling
         id: spelling
-        uses: check-spelling/check-spelling@prerelease
+        uses: check-spelling-sandbox/check-spelling@submodules
         with:
+          submodules: recursive
           suppress_push_for_open_pull_request: ${{ github.actor != 'dependabot[bot]' && 1 }}
           checkout: true
           check_file_names: 1
